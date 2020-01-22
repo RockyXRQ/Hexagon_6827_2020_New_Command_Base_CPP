@@ -8,12 +8,15 @@
 #include "subsystems/Turret.h"
 
 Turret::Turret() {
-    m_shootLeftMotor.SetNeutralMode(NeutralMode::Coast);
-    m_shootRightMotor.SetNeutralMode(NeutralMode::Coast);
+    m_shootLeftMotor.SetNeutralMode(NeutralMode::Brake);
+    m_shootRightMotor.SetNeutralMode(NeutralMode::Brake);
     m_aimMotor.SetNeutralMode(NeutralMode::Brake);
 
     m_shootLeftMotor.Follow(m_shootRightMotor);
     m_shootLeftMotor.SetInverted(InvertType::OpposeMaster);
+
+    m_shootLeftMotor.EnableVoltageCompensation(true);
+    m_shootRightMotor.EnableVoltageCompensation(true);
 
     SetName("Turret");
 }

@@ -11,6 +11,9 @@ Magazine::Magazine() {
     m_spinHighMotor.Follow(m_spinLowMotor);
     m_spinHighMotor.SetInverted(InvertType::OpposeMaster);
 
+    m_spinHighMotor.SetNeutralMode(NeutralMode::Brake);
+    m_spinLowMotor.SetNeutralMode(NeutralMode::Brake);
+
     SetName("Magazine");
 }
 

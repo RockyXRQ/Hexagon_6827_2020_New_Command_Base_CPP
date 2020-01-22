@@ -10,9 +10,9 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 
 Intake::Intake() {
-    m_spinMotor.SetNeutralMode(NeutralMode::Brake);
+    m_spinMotor.SetNeutralMode(NeutralMode::Coast);
     m_spinMotor.EnableVoltageCompensation(true);
-
+    
     SetName("Intake");
     AddChild("Spin Encoder", &m_spinEncoder);
 }

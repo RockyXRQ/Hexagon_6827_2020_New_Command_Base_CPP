@@ -10,6 +10,8 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc2/command/CommandScheduler.h>
 
+//TODO1:Add path tracing auto commands.
+
 void Robot::RobotInit() {
 }
 
