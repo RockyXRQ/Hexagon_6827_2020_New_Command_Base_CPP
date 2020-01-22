@@ -13,6 +13,7 @@
 #include "subsystems/Intake.h"
 #include "subsystems/Magazine.h"
 #include "subsystems/Turret.h"
+#include "subsystems/JetsonNanoCamera.h"
 
 #include <frc2/command/Command.h>
 #include <frc/joystick.h>
@@ -36,6 +37,8 @@ class RobotContainer {
     Intake m_intake;
     Magazine m_magazine;
     Turret m_turret;
+
+    JetsonNanoCamera m_camera;
 
     void ConfigureButtonBindings();
 };

@@ -43,5 +43,10 @@ constexpr int TURRET_SHOOT_RIGHT_MOTOR_ID = 9;
 constexpr int TURRET_AIM_MOTOR_ID = 10;
 
 constexpr double TURRET_MANUAL_AIM_SPEED = 0.8;
+constexpr double TURRET_AUTO_AIM_SEARCHING_SPEED = 0.3;
+
+constexpr double TURRET_AUTO_AIM_KP = 0.2;
+constexpr double TURRET_AUTO_AIM_KI = 0.2;
+constexpr double TURRET_AUTO_AIM_KD = 0;
 }  // namespace turret
 }  // namespace constants
