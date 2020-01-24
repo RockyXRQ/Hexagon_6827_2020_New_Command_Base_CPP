@@ -1,6 +1,16 @@
 from cv2 import cv2
 from HSV_Base_Grip import GripPipeline
 
+
+def delet_contours(contours, delete_list):
+    delta = 0
+    for i in range(len(delete_list)):
+        # print("i= ", i)
+        del contours[delete_list[i] - delta]
+        delta = delta + 1
+    return contours
+
+
 def extra_processing(showFrame, pipeline):
     """
     Performs extra processing on the pipeline's outputs and publishes data to NetworkTables.
@@ -21,9 +31,12 @@ def extra_processing(showFrame, pipeline):
         widths.append(w)
         heights.append(y)
         cv2.drawContours(showFrame, contour, -1, 255, 3)
-        cv2.imshow("match?",showFrame)
+        cv2.circle(
+            showFrame, (int(center_x_positions[0]), int(center_y_positions[0])), 3, (0, 0, 255), -1)
+        cv2.imshow("match?", showFrame)
         cv2.waitKey(10)
-    print("X:",center_x_positions,"Y",center_y_positions)
+    print("X:", center_x_positions, "Y", center_y_positions)
+
 
 def main():
     print('Creating video capture')
