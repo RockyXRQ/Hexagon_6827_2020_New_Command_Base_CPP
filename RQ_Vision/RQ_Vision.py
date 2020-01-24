@@ -1,15 +1,8 @@
 from cv2 import cv2
 from HSV_Base_Grip import GripPipeline
 
-
-def delet_contours(contours, delete_list):
-    delta = 0
-    for i in range(len(delete_list)):
-        # print("i= ", i)
-        del contours[delete_list[i] - delta]
-        delta = delta + 1
-    return contours
-
+# TODO1: Add new thread.
+# TODO2: Add NetworkTable to deliver data.
 
 def extra_processing(showFrame, pipeline):
     """
