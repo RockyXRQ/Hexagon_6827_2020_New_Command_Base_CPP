@@ -5,11 +5,6 @@ from HSV_Base_Grip import GripPipeline
 # TODO2: Add NetworkTable to deliver data.
 
 def extra_processing(showFrame, pipeline):
-    """
-    Performs extra processing on the pipeline's outputs and publishes data to NetworkTables.
-    :param pipeline: the pipeline that just processed an image
-    :return: None
-    """
     center_x_positions = []
     center_y_positions = []
     widths = []
