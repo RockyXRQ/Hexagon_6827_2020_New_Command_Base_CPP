@@ -2,6 +2,7 @@ from cv2 import cv2
 import numpy
 import math
 from enum import Enum
+# Not good to be used.
 
 
 class GripPipeline:

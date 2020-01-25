@@ -11,7 +11,7 @@
 JetsonNanoCamera::JetsonNanoCamera() {
     auto m_networkTable =
         nt::NetworkTableInstance::GetDefault().GetTable("JETSONNANO");
-    m_isHaveTarget = m_networkTable->GetEntry("isHaveTarget");
+    m_isHaveTarget = m_networkTable->GetEntry("IsHaveTarget");
     m_spinError = m_networkTable->GetEntry("SpinError");
 }
 
