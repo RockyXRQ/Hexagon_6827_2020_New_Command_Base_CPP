@@ -4,7 +4,11 @@ from networktables import NetworkTablesInstance
 import threading
 
 
-def extra_processing(pipeline, showFrame):
+pipeline = Pipeline.HSV_Base_Grip.GripPipeline()
+
+
+def extra_processing(showFrame):
+    global pipeline
 
     m_table = NetworkTablesInstance.getDefault().getTable("JETSONNANO")
 
@@ -32,7 +36,7 @@ def extra_processing(pipeline, showFrame):
 
 
 def main():
-    pipeline = Pipeline.HSV_Base_Grip.GripPipeline()
+
     print('Creating video capture')
 
     cap = cv2.VideoCapture(1)
@@ -42,7 +46,7 @@ def main():
         have_frame, showFrame = cap.read()
         if have_frame:
             pipeline.process(showFrame)
-            extra_processing(pipeline, showFrame)
+            extra_processing(showFrame)
 
         cv2.putText(showFrame, "FPS : " + str(int(cv2.getTickFrequency() / (cv2.getTickCount() - timer))), (100, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.75, (50, 170, 50), 2)
