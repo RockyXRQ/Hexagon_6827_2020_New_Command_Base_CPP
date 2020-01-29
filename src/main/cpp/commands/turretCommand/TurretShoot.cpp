@@ -18,7 +18,7 @@ void TurretShoot::Execute() {
 }
 // Returns true when the command should end.
 bool TurretShoot::IsFinished() {
-    return false;
+    return true;
 }
 // Called once the command ends or is interrupted.
 void TurretShoot::End(bool interrupted) {

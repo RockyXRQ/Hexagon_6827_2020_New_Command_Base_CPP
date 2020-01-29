@@ -19,7 +19,7 @@ void MagazineUnLoad::Execute() {
 
 // Returns true when the command should end.
 bool MagazineUnLoad::IsFinished() {
-    return false;
+    return true;
 }
 
 // Called once the command ends or is interrupted.

@@ -19,7 +19,7 @@ void IntakeOut::Execute() {
 
 // Returns true when the command should end.
 bool IntakeOut::IsFinished() {
-    return false;
+    return true;
 }
 
 // Called once the command ends or is interrupted.

@@ -21,7 +21,7 @@ void TurretRightSpin::Execute() {
 
 // Returns true when the command should end.
 bool TurretRightSpin::IsFinished() {
-    return false;
+    return true;
 }
 
 // Called once the command ends or is interrupted.
